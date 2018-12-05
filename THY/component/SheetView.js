@@ -28,7 +28,7 @@ export default class SheetView extends Component {
     };
   }
   componentDidMount() {
-    fetch(`http://225858ws28.51mypc.cn:21337/select?sheet_name=${this.props.passData}`, {
+    fetch(`http://129.28.79.59:5000/select?sheet_name=${this.props.passData}`, {
       method: "GET"
     })
       .then((response) => response.json())
@@ -48,7 +48,7 @@ export default class SheetView extends Component {
       const result = [];
       for (var i = 0; i < this.state.jsonNumber; i++) {
         const {
-          ID,
+          序号,
           使用部门,
           设备名称,
           规格型号,
@@ -64,7 +64,7 @@ export default class SheetView extends Component {
           备注
         } = this.state.data[i];
         result.push([
-          `${ID - 1}`,
+          `${序号}`,
           `${使用部门}`,
           `${设备名称}`,
           `${规格型号}`,

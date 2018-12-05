@@ -16,7 +16,7 @@ export default class RootView extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://225858ws28.51mypc.cn:21337/all`, {
+    fetch(`http://129.28.79.59:5000/all`, {
       method: "GET"
     })
       .then((response) => response.json())
